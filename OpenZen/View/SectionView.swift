@@ -6,18 +6,22 @@
 //
 
 import SwiftUI
+import SFSafeSymbols
 
 struct SectionView: View {
     // TODO: how to creaate mock data randomly
-    @State let data: [FeedData] = [FeedData(id: "1", title: "2", description: "345")]
+    @Binding var data: FeedData
     var body: some View {
         HStack {
-            Image(systemName: "")
+            Image(systemSymbol: ._00Circle)
+            Text(data.title)
+            Text(data.description)
+            Spacer()
         }
     }
 }
 
-struct FeedData: Codable {
+struct FeedData: Identifiable {
     let id: String
     let title: String
     let description: String

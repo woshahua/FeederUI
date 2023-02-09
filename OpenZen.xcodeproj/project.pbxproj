@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		26ADA50029374D8700697247 /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ADA4FF29374D8700697247 /* SectionView.swift */; };
 		26ADA50229897CE200697247 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ADA50129897CE200697247 /* AppRouter.swift */; };
-		26ADA504298E44D100697247 /* NotificationsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26ADA503298E44D100697247 /* NotificationsTab.swift */; };
+		26ADA50729914DD300697247 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 26ADA50629914DD300697247 /* SFSafeSymbols */; };
 		26D9E23C2923F73F004E95B4 /* OpenZenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D9E23B2923F73F004E95B4 /* OpenZenApp.swift */; };
 		26D9E23E2923F73F004E95B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D9E23D2923F73F004E95B4 /* ContentView.swift */; };
 		26D9E2402923F740004E95B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26D9E23F2923F740004E95B4 /* Assets.xcassets */; };
@@ -39,7 +39,6 @@
 /* Begin PBXFileReference section */
 		26ADA4FF29374D8700697247 /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
 		26ADA50129897CE200697247 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
-		26ADA503298E44D100697247 /* NotificationsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsTab.swift; sourceTree = "<group>"; };
 		26D9E2382923F73F004E95B4 /* OpenZen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenZen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26D9E23B2923F73F004E95B4 /* OpenZenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenZenApp.swift; sourceTree = "<group>"; };
 		26D9E23D2923F73F004E95B4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26ADA50729914DD300697247 /* SFSafeSymbols in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				26ADA4FF29374D8700697247 /* SectionView.swift */,
-				26ADA503298E44D100697247 /* NotificationsTab.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -160,6 +159,9 @@
 			dependencies = (
 			);
 			name = OpenZen;
+			packageProductDependencies = (
+				26ADA50629914DD300697247 /* SFSafeSymbols */,
+			);
 			productName = OpenZen;
 			productReference = 26D9E2382923F73F004E95B4 /* OpenZen.app */;
 			productType = "com.apple.product-type.application";
@@ -232,6 +234,9 @@
 				Base,
 			);
 			mainGroup = 26D9E22F2923F73F004E95B4;
+			packageReferences = (
+				26ADA50529914DD300697247 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
+			);
 			productRefGroup = 26D9E2392923F73F004E95B4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -276,7 +281,6 @@
 			files = (
 				26ADA50229897CE200697247 /* AppRouter.swift in Sources */,
 				26D9E23E2923F73F004E95B4 /* ContentView.swift in Sources */,
-				26ADA504298E44D100697247 /* NotificationsTab.swift in Sources */,
 				26D9E23C2923F73F004E95B4 /* OpenZenApp.swift in Sources */,
 				26ADA50029374D8700697247 /* SectionView.swift in Sources */,
 			);
@@ -603,6 +607,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		26ADA50529914DD300697247 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SFSafeSymbols/SFSafeSymbols";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		26ADA50629914DD300697247 /* SFSafeSymbols */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 26ADA50529914DD300697247 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
+			productName = SFSafeSymbols;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 26D9E2302923F73F004E95B4 /* Project object */;
 }
