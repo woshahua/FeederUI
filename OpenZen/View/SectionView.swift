@@ -9,7 +9,6 @@ import SwiftUI
 import SFSafeSymbols
 
 struct SectionView: View {
-    // TODO: how to creaate mock data randomly
     @Binding var data: FeedData
     var body: some View {
         HStack {
